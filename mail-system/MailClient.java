@@ -11,6 +11,7 @@ public class MailClient
     private MailServer server;
     // The user running this client.
     private String user;
+    
 
     /**
      * Create a mail client run by user and attached to the given server.
@@ -25,8 +26,8 @@ public class MailClient
      * Return the next mail item (if any) for this user.
      */
     public MailItem getNextMailItem()
-    {
-        return server.getNextMailItem(user);
+    {       
+        return server.getNextMailItem(user);        
     }
 
     /**
@@ -42,6 +43,18 @@ public class MailClient
         else {
             item.print();
         }
+    }
+
+    public void displayRespuestaAutomatica(boolean activar)
+    {
+        activar = false;
+    }
+
+    public void fijarRespuestaAutomatica()
+    {
+        String asunto = "";
+        String mensaje = "";
+        String message = asunto + mensaje;
     }
 
     /**
